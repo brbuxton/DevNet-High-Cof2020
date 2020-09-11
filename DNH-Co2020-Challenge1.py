@@ -48,6 +48,7 @@ while True:
     try:
         address_input = input("Enter the IP network and mask in CIDR format: ")
         if ipaddress.IPv4Network(address_input):
+            print(cidr_to_netmask(address_input))
             break
     except Exception as e:
         print(e)
